@@ -94,8 +94,16 @@ resource "google_sql_database_instance" "instance" {
   region           = var.location
   database_version = var.dbversion
   root_password    = var.dbrootpwd
-  settings {
+  
+settings {
     tier = var.tier
+     ip_configuration {
+      authorized_networks {
+        name         = "Allow Local IP"
+        value        = var.localip
+        
+      }
+    }
   }
   # set `deletion_protection` to true, will ensure that one cannot accidentally delete this instance by
   # use of Terraform whereas `deletion_protection_enabled` flag protects this instance at the GCP level.
