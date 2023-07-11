@@ -14,6 +14,10 @@ variable "dbversion" {
 type=string
 default="SQLSERVER_2017_STANDARD"
 }
+variable "localip" {
+type=string
+default="24.239.131.30"
+}
 variable "dbrootpwd" {
 type=string
 default="Prakash@123"
