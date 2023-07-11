@@ -16,7 +16,7 @@ default="SQLSERVER_2017_STANDARD"
 }
 variable "localip" {
 type=string
-default="24.239.131.30"
+default="24.239.131.31"
 }
 variable "dbrootpwd" {
 type=string
